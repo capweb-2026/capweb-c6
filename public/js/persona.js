@@ -35,7 +35,7 @@ export function validatePersona(candidat) {
   }
   const erreurs = [];
   const { nom, emoji, accueil, suggestions } = candidat;
-  if (typeof nom !== 'string' || nom.length < 2 || nom.length > 30) {
+  if (typeof nom !== 'string' || nom.length < 2 || nom.length > 20) {
     erreurs.push('Le nom doit contenir entre 2 et 20 caractères.');
   }
   if (!estEmojiUnique(emoji)) {
