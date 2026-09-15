@@ -1,7 +1,7 @@
-// Cap Web — cerveau à règles (TP08). Fonctions pures : aucun accès à la page.
+// Homere.AI — cerveau à règles (TP08). Fonctions pures : aucun accès à la page.
 
 const REPONSES = {
-  salut: 'Bonjour ! Je suis Cap Web, un assistant à règles. Écrivez « aide » pour voir ce que je sais faire.',
+  salut: 'Bonjour ! Je suis Homere.AI, un assistant à règles. Écrivez « aide » pour voir ce que je sais faire.',
   aide: 'Je connais trois mots : « salut », « aide » et « test ». Essayez-les !',
   test: 'Test bien reçu : mes règles fonctionnent.',
   repli: 'Je ne connais que « salut », « aide » et « test ». Reformulez avec l’un de ces mots.'
