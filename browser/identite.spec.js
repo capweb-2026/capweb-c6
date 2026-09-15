@@ -11,7 +11,7 @@ const ACCUEIL = 'Bienvenue sur Homere.AI ! De quelle mythologie voulez-vous parl
 const SUGGESTIONS = [
   'Quel est le conte le plus connu de la mythologie égyptienne ?',
   'Comment Ulysse est-il rentré chez lui ?',
-  'Quels sont les évènent anonciateurs du Ragnarok ?',
+  'Quels sont les évènements anonciateurs du Ragnarok ?',
 ];
 
 function surveiller(page) {
