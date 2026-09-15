@@ -14,7 +14,7 @@ Rédigez chaque critère sous la forme « Quand …, le système … ». Numéro
 4. **Suggestions** — Quand la page s'ouvre, le système propose exactement trois questions suggérées. Quand l'utilisateur clique sur l'une d'elles, le système la place dans le champ de saisie sans l'envoyer. Les 3 questions sont : 
    - Quel est le conte le plus connu de la mythologie égyptienne ?
    - Comment Ulysse est-il rentré chez lui ?
-   - Quels sont les évènent anonciateurs du Ragnarok ?
+   - Quels sont les évènements anonciateurs du Ragnarok ?
 5. **Réponses signées** — Quand l'assistant répond, sa ligne commence par son nom au lieu de « Cap Web ».
 6. **Contrat** — Les tests de contrat CP1 restent verts.
 
