@@ -1,6 +1,7 @@
-// Cap Web — câblage (TP07 à TP10) : lire le formulaire, mettre à jour l'historique, demander l'affichage.
+// Homere.AI — câblage (TP07 à TP10) : lire le formulaire, mettre à jour l'historique, demander l'affichage.
 import { validateMessage, replyTo } from './brain.js';
 import { renderMessages } from './view.js';
+import { persona } from './persona.js';
 
 const formulaire = document.querySelector('#chat-form');
 const champ = document.querySelector('#message');
@@ -8,9 +9,20 @@ const liste = document.querySelector('#messages');
 const statut = document.querySelector('#status');
 const effacer = document.querySelector('#effacer');
 const versionElt = document.querySelector('#version');
+const accueil = document.querySelector('#accueil');
+const suggestions = document.querySelector('#suggestions');
 
 const CLE = 'capweb.historique';
 const historique = [];
+
+function afficher() {
+  renderMessages(historique, liste);
+  // L’accueil n’est visible que quand la conversation est vide.
+  if (accueil) {
+    accueil.textContent = persona.accueil;
+    accueil.hidden = historique.length > 0;
+  }
+}
 
 function sauvegarder() {
   localStorage.setItem(CLE, JSON.stringify(historique));
@@ -42,7 +54,7 @@ formulaire.addEventListener('submit', (event) => {
   historique.push({ role: 'user', text: controle.value });
   historique.push({ role: 'assistant', text: replyTo(controle.value) });
   sauvegarder();
-  renderMessages(historique, liste);
+  afficher();
   champ.value = '';
   statut.textContent = '';
   champ.focus();
@@ -54,12 +66,25 @@ effacer.addEventListener('click', () => {
   }
   historique.length = 0;
   localStorage.removeItem(CLE);
-  renderMessages(historique, liste);
+  afficher();
   statut.textContent = 'Conversation effacée.';
 });
 
+if (suggestions) {
+  // Un clic place la suggestion dans le champ, sans l'envoyer.
+  const boutons = suggestions.querySelectorAll('button');
+  boutons.forEach((bouton, index) => {
+    const texte = persona.suggestions[index] ?? bouton.textContent ?? '';
+    bouton.textContent = texte;
+    bouton.addEventListener('click', () => {
+      champ.value = texte;
+      champ.focus();
+    });
+  });
+}
+
 charger();
-renderMessages(historique, liste);
+afficher();
 
 fetch('/version.json', { headers: { accept: 'application/json' } })
   .then((reponse) => (reponse.ok ? reponse.json() : null))

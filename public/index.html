@@ -4,18 +4,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cap Web — Conteur de mythologies</title>
+  <title>Homere.AI — Conteur de mythologies</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
   <header>
-    <h1>Cap Web</h1>
+    <h1>📖 Homere.AI</h1>
     <p>Raconte et explique les mythes grecs, nordiques et égyptiens.</p>
   </header>
   <main>
     <section aria-labelledby="titre-chat">
       <h2 id="titre-chat">Discussion</h2>
+      <p id="accueil">Bienvenue sur Homere.AI ! De quelle mythologie voulez-vous parler ?</p>
+      <div id="suggestions">
+        <button type="button">Quel est le conte le plus connu de la mythologie égyptienne ?</button>
+        <button type="button">Comment Ulysse est-il rentré chez lui ?</button>
+        <button type="button">Quels sont les évènements anonciateurs du Ragnarok ?</button>
+      </div>
       <ul id="messages" aria-live="polite" aria-label="Messages"></ul>
       <form id="chat-form">
         <label for="message">Votre message (280 caractères maximum)</label>
