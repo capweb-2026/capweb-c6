@@ -87,6 +87,18 @@ button {
   cursor: pointer;
 }
 
+#suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: 1rem 0;
+}
+
+button.suggestion {
+  padding: .25rem .5rem;
+  font-weight: 400;
+}
+
 button:hover {
   background: var(--accent-fonce);
 }
