@@ -4,10 +4,10 @@ Chaque ligne dit quelle connerie est arrêtée, par quoi, et **où est la preuve
 
 | Connerie | Barrière qui l'arrête | Preuve (lien) | Checkpoint |
 |---|---|---|---|
-| Régression | Tests de contrat et CI obligatoire sur `main` | | CP1 |
-| Test affaibli ou supprimé | `check:tests` (TEST-CHANGE obligatoire) et relecture | | CP2 |
-| Dépendance ajoutée | `check:deps` et `dependances-autorisees.json` | | CP2 |
-| Secret exposé | | | CP3 |
+| Régression | Tests de contrat et CI obligatoire sur `main` | https://github.com/capweb-2026/capweb-c6/actions/runs/34970551505/job/104385502817| CP1 |
+| Test affaibli ou supprimé | `check:tests` (TEST-CHANGE obligatoire) et relecture | https://github.com/capweb-2026/capweb-c6/actions/runs/35104657118/job/104822624106?pr=7| CP2 |
+| Dépendance ajoutée | `check:deps` et `dependances-autorisees.json` | https://github.com/capweb-2026/capweb-c6/actions/runs/35104671002/job/104822671589?pr=8| CP2 |
+| Secret exposé | || CP3 |
 | IA qui sort de son thème | | | CP3 |
 | Faille (`innerHTML`, injection) | | | CP4 |
 | Contrôle désactivé | | | CP4 |
